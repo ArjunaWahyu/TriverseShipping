@@ -43,7 +43,7 @@ function updateSlider() {
 }
 
 // Atur interval untuk otomatis menggeser slide setiap beberapa detik
-const interval = setInterval(nextSlide, 5000); // Ganti gambar setiap 5 detik
+let interval = setInterval(nextSlide, 5000); // Ganti gambar setiap 5 detik
 
 // Hentikan interval saat pengguna menghover slider
 slider.addEventListener('mouseenter', () => {
