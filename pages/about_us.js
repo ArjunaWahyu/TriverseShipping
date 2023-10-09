@@ -1,5 +1,5 @@
 // add delay to the page loading
-// setTimeout(function() {
+setTimeout(function() {
     //your code to be executed after 1 second
     let currentPosition = 1; // Mulai dari gambar pertama
     const totalSlides = 2; // Jumlah total gambar
@@ -26,4 +26,4 @@
 
     // Initial display
     showSlide(currentPosition - 1);
-// }, 10000);
+}, 10000);
