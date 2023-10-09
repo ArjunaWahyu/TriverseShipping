@@ -25,7 +25,7 @@ exports.register = (req, res) => {
         }
         if (results.length > 0) {
             // Handle email already in use
-            return ejs.renderFile(path.join(__dirname, "../FE/register.html"), {
+            return ejs.renderFile(path.join(__dirname, "../fe/register.html"), {
                 message: 'That email is already in use'
             }, (err, data) => {
                 if (err) {
@@ -44,7 +44,7 @@ exports.register = (req, res) => {
                 console.log(error);
                 return res.status(500).send('Internal Server Error');
             } else {
-                return ejs.renderFile(path.join(__dirname, "../FE/register.html"), {
+                return ejs.renderFile(path.join(__dirname, "../fe/register.html"), {
                     message: 'Registered user, please log in.'
                 }, (err, data) => {
                     if (err) {
@@ -99,7 +99,7 @@ exports.login = (req, res) => {
             expiresIn: '1h' // Adjust token expiration as needed
         });
 
-        ejs.renderFile(path.join(__dirname, "../FE/home.html"), { userLoggedIn, username, userEmail }, (err, data) => {
+        ejs.renderFile(path.join(__dirname, "../fe/home.html"), { userLoggedIn, username, userEmail }, (err, data) => {
             if (err) {
                 console.error("Error rendering HTML:", err);
                 return res.status(500).send('Internal Server Error');
