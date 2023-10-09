@@ -29,6 +29,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.6.1",
     "nodemon": "^3.0.1",
+    "next": "latest",
     "path": "^0.12.7",
     "require": "^2.4.20",
     "sequelize": "^6.33.0"
