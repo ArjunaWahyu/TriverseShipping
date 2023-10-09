@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../about_us.css">
     <title>Triverse Shipping</title>
 </head>
+
 <body>
     <div class="slider-container">
         <div class="slide">
@@ -19,7 +21,12 @@
     </div>
     <!-- <script src="../about_us.js"></script> -->
     <script>
-        let currentPosition = 1; // Mulai dari gambar pertama
+
+        import { useEffect } from "react";
+
+        useEffect(() => {
+            // Kode JavaScript yang mencoba mengakses `document` di sini
+            let currentPosition = 1; // Mulai dari gambar pertama
             const totalSlides = 2; // Jumlah total gambar
 
             const slides = document.querySelectorAll('.slide');
@@ -44,6 +51,10 @@
 
             // Initial display
             showSlide(currentPosition - 1);
+        }, []);
+
+        
     </script>
 </body>
+
 </html>
