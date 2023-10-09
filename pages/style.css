@@ -1,0 +1,69 @@
+.container_other {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .image {
+            flex: 1;
+        }
+        .form {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+input[type="search"],
+input[type="number"],
+select {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+.form {
+    flex: 1;
+    margin-left: 20px;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container_other {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px 20px;
+    margin: auto; /* Meletakkan elemen di tengah */
+    width: 70%; /* Anda bisa menyesuaikan lebar sesuai kebutuhan */
+}
+
+.input_group{
+    padding-right: 10px ;
+}
+
+input[type="weight"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+input[type="length"],
+input[type="widht"],
+input[type="height"],
+select {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}

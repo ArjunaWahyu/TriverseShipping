@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js" defer></script>
+    <title>Triverse Shipping</title>
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../../image/triverse.png" alt="Triverse Shipping Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu-item" id="order">
+                        <a href="order.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/packing.png" alt="packing"/>
+                            </span>
+                        </a>
+                        Order
+                    </li>
+                    <li class="menu-item parent" id="search">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search--v1"/></span>
+                        Search
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="trace">
+                                <a href="tracking.html">Trace & Track</a>
+                            </li>
+                            <li id="rates">
+                                <a href="shipping_rates.html">Shipping Rates</a>
+                            </li>
+                            <li id="find">
+                                <a href="find_drop_point.html">Find Drop Point</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="services" >
+                        <a href="services.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/loading-truck--v1.png" alt="loading-truck--v1"/>
+                        </span>
+                        Services
+                        </a>
+                    </li>
+                    <li class="menu-item parent" id="information">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/info--v1.png" alt="info--v1"/>
+                        </span>
+                        Information
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="faq">
+                                <a href="information_faq.html">FAQ</a>
+                            </li>
+                            <li id="terms">
+                                <a href="information_terms.html">Terms</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="about">
+                        <a href="about_us.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/conference-call--v1.png" alt="conference-call--v1"/>
+                            </span>
+                        </a>
+                        About Us
+                    </li>
+                    <li class="menu-item parent" id="login">
+                        <a href="home.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/test-account.png" alt="test-account"/>
+                        </span>
+                        </a>
+                        <% if (userLoggedIn) { %>
+                            <%= username %>
+                        <% } else { %>
+                            <a href="/login.html">Login/Register</a>
+                        <% } %>
+                    </li>
+                    <li action="/logout" method="post" id="logout-button" >
+                        <a href="/">
+                            <button id="logout-button">Logout</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="sbanner1">
+                <img src="../image/sbannerya.png" alt="Banner 1" width="1220" height="260">
+            </div>
+        </div>
+
+        <section class="service">
+            <div class="card">
+                <div class="llogo">
+                    <img src="../image/s1.png">
+                </div>
+                <div class="ccontent">
+                    <h3>Express Shipping</h3>
+                    <p>Estimated Time of Arrival: 2-5 days</p>
+                    <p>Coverage: All Indonesia</p>
+                    <p>*Delivery time depends on the destination area</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="llogo">
+                    <img src="../image/s2.png">
+                </div>
+                <div class="ccontent">
+                    <h3>Standard Shipping</h3>
+                    <p>Estimated Time of Arrival: 5-15 days</p>
+                    <p>Coverage: All Javanese Island</p>
+                    <p>*To Sumatera, Kalimantan, Sulawesi, Bali Island (Delivery time depends on the destination area)</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="llogo">
+                    <img src="../image/s3.png">
+                </div>
+                <div class="ccontent">
+                    <h3>Freight Shipping</h3>
+                    <p>Estimated Time of Arrival: 1-3 Days</p>
+                    <p>Coverage: Jawa, Bali, Kalimantan, Sumatra, Sulawesi, Batam</p>
+                    <p>*Delivery time depends on the destination area</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <p>Join our mailing list for exciting news and updates.</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="copyright">
+            &copy; 2023 Triverse Shipping. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

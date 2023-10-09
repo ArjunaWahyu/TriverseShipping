@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../information_faq.css">
+    <script src="../script.js" defer></script>
+    <script>
+        function redirectToFAQ() {
+            // Mengarahkan ke halaman "information_faq.html" saat tombol "FAQ" diklik
+            window.location.href = 'information_faq.html';
+        }
+    
+        function redirectToTerms() {
+            // Mengarahkan ke halaman "information_terms.html" saat tombol "Terms" diklik
+            window.location.href = 'information_terms.html';
+        }
+    </script>
+    <title>Triverse Shipping</title>
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../../image/triverse.png" alt="Triverse Shipping Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu-item" id="order">
+                        <a href="order.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/packing.png" alt="packing"/>
+                            </span>
+                        </a>
+                        Order
+                    </li>
+                    <li class="menu-item parent" id="search">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search--v1"/></span>
+                        Search
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="trace">
+                                <a href="tracking.html">Trace & Track</a>
+                            </li>
+                            <li id="rates">
+                                <a href="shipping_rates.html">Shipping Rates</a>
+                            </li>
+                            <li id="find">
+                                <a href="find_drop_point.html">Find Drop Point</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="services" >
+                        <a href="services.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/loading-truck--v1.png" alt="loading-truck--v1"/>
+                        </span>
+                        Services
+                        </a>
+                    </li>
+                    <li class="menu-item parent" id="information">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/info--v1.png" alt="info--v1"/>
+                        </span>
+                        Information
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="faq">
+                                <a href="information_faq.html">FAQ</a>
+                            </li>
+                            <li id="terms">
+                                <a href="information_terms.html">Terms</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="about">
+                        <a href="about_us.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/conference-call--v1.png" alt="conference-call--v1"/>
+                            </span>
+                        </a>
+                        About Us
+                    </li>
+                    <li class="menu-item parent" id="login">
+                        <a href="home.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/test-account.png" alt="test-account"/>
+                        </span>
+                        </a>
+                        <% if (userLoggedIn) { %>
+                            <%= username %>
+                        <% } else { %>
+                            <a href="/login.html">Login/Register</a>
+                        <% } %>
+                    </li>
+                    <li action="/logout" method="post" id="logout-button" >
+                        <a href="/">
+                            <button id="logout-button">Logout</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img width="20" height="20" src="../image/Information 1.png" alt="Banner 1">
+                </div>
+                <div class="slide">
+                    <img width="20" height="20" src="../image/information 2.png" alt="Banner 2">
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button class="info-button active" onclick="redirectToFAQ()">FAQ</button>
+            <button class="info-button" onclick="redirectToTerms()">Terms</button>
+        </div>
+
+        <div class="faq-container" id="faq-container">
+            <div class="faq-item">
+                <h2 class="question">Bagaimana cara melacak pengiriman saya?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Anda dapat melacak pengiriman Anda dengan memasukkan nomor pelacakan di halaman "Lacak Pengiriman" kami. Nomor pelacakan biasanya diberikan oleh kami setelah pengiriman dikirim.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h2 class="question">Apa yang harus saya lakukan jika paket saya tidak sampai tepat waktu?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Jika paket Anda tidak sampai pada waktu yang diharapkan, Anda dapat menghubungi layanan pelanggan kami untuk mendapatkan bantuan lebih lanjut. Kami akan melakukan yang terbaik untuk membantu Anda menyelesaikan masalah ini.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h2 class="question">Bagaimana saya dapat menghubungi layanan pelanggan Anda?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Anda dapat menghubungi tim layanan pelanggan kami melalui nomor telepon yang tertera di halaman "Hubungi Kami" kami atau melalui formulir kontak di situs web kami.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2 class="question">Bagaimana cara mendapatkan nomor pelacakan untuk pengiriman saya?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Nomor pelacakan pengiriman Anda akan diberikan kepada Anda saat Anda melakukan pemesanan. Anda juga dapat menemukan nomor pelacakan ini di email konfirmasi pemesanan Anda</p>
+            </div>
+            
+            <div class="faq-item">
+                <h2 class="question">Bagaimana cara mendapatkan nomor pelacakan untuk pengiriman saya?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Nomor pelacakan pengiriman Anda akan diberikan kepada Anda saat Anda melakukan pemesanan. Anda juga dapat menemukan nomor pelacakan ini di email konfirmasi pemesanan Anda</p>
+            </div>
+
+            <div class="faq-item">
+                <h2 class="question">Bagaimana cara menghubungi Anda untuk pertanyaan lebih lanjut atau bantuan lainnya?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Untuk pertanyaan lebih lanjut atau bantuan lainnya, Anda dapat menghubungi tim layanan pelanggan kami melalui nomor telepon, email, atau formulir kontak yang tertera di situs web kami</p>
+            </div>
+
+            <div class="faq-item">
+                <h2 class="question">Apakah Anda menyediakan asuransi pengiriman?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Ya, kami menyediakan opsi asuransi pengiriman untuk melindungi paket Anda dari kerusakan atau kehilangan. Anda dapat memilih untuk menambahkan asuransi saat melakukan pemesanan.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h2 class="question">Apa yang harus saya lakukan jika saya mendapatkan pemberitahuan bahwa pengiriman saya tertunda?</h2>
+                <hr class="feature-divider">
+                <p class="answer">Jika Anda mendapatkan pemberitahuan bahwa pengiriman Anda tertunda, Anda dapat menghubungi tim layanan pelanggan kami untuk informasi lebih lanjut tentang penyebab keterlambatan dan estimasi waktu kedatangan yang baru.</p>
+            </div>
+        </div>
+    </main>
+
+        
+    
+
+    
+
+</body>
+</html>

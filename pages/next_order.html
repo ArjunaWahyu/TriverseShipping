@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="next_order.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Halaman Order</title>
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="image/triverse.png" alt="Triverse Shipping Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu-item" id="order">
+                        <a href="order.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/packing.png" alt="packing"/>
+                            </span>
+                        </a>
+                        Order
+                    </li>
+                    <li class="menu-item parent" id="search">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search--v1"/></span>
+                        Search
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="trace">Trace & Track</li>
+                            <li id="rates">Shipping Rates</li>
+                            <li id="find">Find Drop Point</li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="services" >
+                        <a href="services.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/loading-truck--v1.png" alt="loading-truck--v1"/>
+                        </span>
+                        Services
+                        </a>
+                    </li>
+                    <li class="menu-item parent" id="information">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/info--v1.png" alt="info--v1"/>
+                        </span>
+                        Information
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="faq">FAQ</li>
+                            <li id="terms">Terms</li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="about">
+                        <a href="about_us.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/conference-call--v1.png" alt="conference-call--v1"/>
+                            </span>
+                        </a>
+                        About Us
+                    </li>
+                    <li class="menu-item" id="login">
+                        <a href="login_register.html">
+                            <span class="menu-icon">
+                                <img width="18" height="18" src="https://img.icons8.com/ios/50/test-account.png" alt="test-account"/>
+                            </span>
+                        </a>
+                        Login/Register
+                    </li>
+                    <li class="menu-item parent" id="english">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/globe--v1.png" alt="globe--v1"/>
+                        </span>
+                        English
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="ind">Indonesia</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="sbanner1">
+                <img src="image/order .png" alt="Banner 1" width="1220" height="260">
+            </div>
+        </div>
+
+        <section class="order-container">
+            <div class="informasi-pengirim">
+                <h2>Informasi Paket Anda</h2>
+                <hr class="feature-divider">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="tipe">Tipe Barang</label>
+                        <input type="text" id="tipe" name="tipe"  required>
+                    </div>
+                    <div class="input-field" >
+                        <label for="barang">Nama Barang</label>
+                        <input type="text" id="barang" name="barang"  required>
+                    </div>
+                    <div class="input-field" >
+                        <label for="pengiriman">Tipe Pengiriman</label>
+                        <input type="text" id="pengiriman" name="pengiriman"  required>
+                    </div>
+                    <div class="input-field" >
+                        <label for="kuantitas">Kuantitas</label>
+                        <input type="text" id="kuantitas" name="kuantitas"  required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field" id="asuransi-input-field">
+                        <input type="text" id="asuransi" name="asuransi"  required>
+                        <label for="asuransi">Asuransi</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="berat">Berat</label>
+                        <input type="text" id="berat" name="berat"  required>
+                    </div>
+                    <div class="input-field" >
+                        <label for="tinggi">Tinggi</label>
+                        <input type="text" id="tinggi" name="tinggi"  required>
+                    </div>
+                    <div class="input-field" >
+                        <label for="lebar">Lebar</label>
+                        <input type="text" id="lebar" name="lebar"  required>
+                    </div>
+                    <div class="input-field" >
+                        <label for="panjang">Panjang</label>
+                        <input type="text" id="panjang" name="panjang"  required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field" id="deskripsi-input-field">
+                        <label for="tipe">Deskripsi :</label>
+                        <input type="text" id="tipe" name="tipe"  required>
+                    </div>
+                </div>
+
+                <hr class="feature-divider"><br><br><br>
+                <div class="summary-group">
+                    <div class="summary-field">
+                        <label for="tipe">Shipping Rate :</label>
+                        <input type="text" id="tipe" name="tipe"  required>
+                    </div>
+                </div>
+                <div class="summary-group">
+                    <div class="summary-field">
+                        <label for="tipe">Insurance :</label>
+                        <input type="text" id="tipe" name="tipe"  required>
+                    </div>
+                </div>
+                <div class="summary-group">
+                    <div class="summary-field">
+                        <label for="tipe">Total Fee :</label>
+                        <input type="text" id="tipe" name="tipe"  required>
+                    </div>
+                </div>
+
+                    <div class="button-container">
+                        <button type="button">ORDER</button>
+                    </div>
+                <!-- Tambahkan field lainnya di sini sesuai kebutuhan -->
+        <</section>
+    
+    </main>
+</body>
+</html>

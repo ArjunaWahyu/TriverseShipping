@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: auto;
+      width: 100%;
+    
+  }
+  .container{
+    max-width: 100%; /* Sesuaikan dengan lebar kontainer Anda */
+    margin: 0 auto; /* Memusatkan kontainer di tengah halaman */
+    padding: 0;
+    background-size: 50%;
+  }
+
+  .submit button {
+    background-color: #3498db; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    border: none; /* Menghilangkan border */
+    padding: 10px 20px; /* Ukuran padding */
+    border-radius: 5px; /* Membuat sudut tombol menjadi bulat */
+    cursor: pointer; /* Mengubah cursor saat dihover */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+}
+
+.submit button:hover {
+    background-color: #2980b9; /* Warna latar belakang saat dihover */
+}
+  
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  height: 200px; 
+  margin-top: 50px; 
+  overflow-y: hidden; /* Menyembunyikan scroll vertikal */
+}
+
+
+
+table {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  width: 60%;
+  border-collapse: collapse;
+}
+
+select, input[type="number"] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+  
+  
+  
+  
+  

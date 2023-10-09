@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+
+}
+
+header {
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+  nav ul li {
+    display: inline;
+    margin-right: 5px;
+  }
+  
+  /* Submenu Style */
+  nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid #555; /* Menambahkan pemisah di atas submenu */
+
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+    left: 0;
+    top: 100%;
+  }
+  
+  nav ul ul li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #555; /* Menambahkan pemisah antara submenunya */
+  }
+  
+  /* Style untuk tautan submenu */
+  nav ul ul li a {
+    color: #fff;
+    text-align: left;
+    padding-left: 5px; /* Menambahkan padding kiri untuk submenunya */
+    text-decoration: none;
+  }
+  
+  nav ul ul li:hover {
+    background-color: #43A2D9; /* Warna latar belakang saat mengarahkan kursor ke submenu */
+  }
+  
+
+.menu-item a {
+    text-decoration: none; /* Menghapus underlined link */
+    color: inherit; /* Menggunakan warna teks yang sama dengan kontainer */
+}
+
+.transparent-header {
+    background-color: rgba(255, 255, 255, 0.7); /* Warna latar belakang transparan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-right: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-item {
+    position: relative;
+    padding: 15px;
+    /* margin: 0 15px; */
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu-item:hover {
+    color: #44A4DC;
+    background-color: #f3f3f3;
+}
+
+.menu-icon {
+    margin-right: 5px;
+}
+
+.arrow {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+    margin-left: 5px;
+    
+}
+
+/* Gaya Submenu */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 200px; /* Lebar submenu yang lebih besar */
+    border-radius: 0 0 5px 5px; /* Sudut bulat bawah */
+    overflow: hidden; /* Agar tepi menu tidak muncul saat transisi */
+    transform-origin: top center; /* Tepi bawah submenu sebagai titik transformasi */
+    transform: scaleY(0); /* Awalnya, submenu diubah ke skala 0 di sumbu Y */
+    transition: transform 0.3s ease; /* Transisi muncul/sembunyi */
+    z-index: 1;
+}
+
+.submenu-item {
+    padding: 10px 0; /* Padding atas dan bawah */
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    margin-left: 0; /* Menghapus padding kiri */
+}
+
+.submenu-item:hover {
+    background-color: #f3f3f3;
+}
+
+.parent:hover .submenu {
+    transform: scaleY(1); /* Saat hover pada parent, submenu diubah kembali ke skala normal */
+}
+
+.submenu-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Gaya halaman order */
+
+.order-container {
+    border-radius: 8px;
+    display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+    justify-content: space-between;
+    flex-direction: column; /* Tampilkan elemen dalam satu kolom */
+    margin-bottom: 70px;
+    margin-left: 30px;
+    padding: 0 20px;
+}
+
+.order-container img {
+    width: 100%; /* Gambar menyesuaikan lebar kontainer */
+    height: auto;
+}
+
+.informasi-pengirim {
+    margin-top: 20px;
+    color: #3b3b3b; /* Warna teks menjadi putih */
+}
+
+.informasi-pengirim h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px; /* Jarak antara setiap input group */
+    display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+    flex-direction: row; /* Tampilkan elemen dalam satu kolom */
+}
+
+.input-field {
+    
+    margin-right: 100px;
+    margin-bottom: 10px; /* Jarak antara input fields */
+    Border : none
+    
+}
+
+.input-field label {
+    font-size: 16px;
+    color: #3b3b3b; /* Warna teks label menjadi putih */
+    margin-left: 0px; /* Memindahkan elemen ini ke kanan */
+}
+
+.input-field input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Mengubah border menjadi abu-abu muda */
+    background-color: #fff;
+    border-radius: 2px;
+    color: #000;
+    outline: none;
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+
+#asuransi-input-field input[type="text"] {
+    background-color: #fff; /* Warna latar belakang kotak input menjadi tosca */
+    color: #3b3b3b; /* Warna teks input menjadi putih */
+    width: 50px;
+}
+
+#deskripsi-input-field input[type="text"] {
+    background-color: #fff; /* Warna latar belakang kotak input menjadi tosca */
+    color: #3b3b3b; /* Warna teks input menjadi putih */
+    height: 100px;
+    width: 1300px;
+    border-radius: 1px;
+}
+
+.input-group .input-field:first-child {
+    padding-right: 20px; /* Tambahkan padding kanan agar ada jarak antara input Nama dan input No. Telepon */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Tombol akan terletak di sebelah kanan */
+    margin-top: 40px; /* Atur jarak antara kotak informasi pengirim dan tombol */
+    margin-right: 100px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: rgb(226, 226, 226);
+    color: #3b3b3b;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+.summary-group {
+        margin-bottom: 5px; /* Jarak antara setiap input group */
+        display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+        flex-direction: row; /* Tampilkan elemen dalam satu kolom */
+        justify-content: flex-end; /* Tombol akan terletak di sebelah kanan */
+}
+
+.summary-field {
+    margin-right: 100px;
+    margin-bottom: 10px; /* Jarak antara input fields */
+}
+
+.summary-field label {
+    font-size: 16px;
+    color: #3b3b3b; /* Warna teks label menjadi putih */
+    margin-left: 0px; /* Memindahkan elemen ini ke kanan */
+}
+
+.summary-field input[type="text"] {
+
+    border-radius: 0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color:#fff; /* Warna latar belakang kotak input menjadi tosca */
+    color: #3b3b3b; /* Warna teks input tetap hitam */
+    outline:auto;
+    border: none; /* Menghilangkan border */
+    width: 100px;
+    height: 2px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* bayangan */
+
+
+}
+/* ... Kode CSS lainnya ... */
+

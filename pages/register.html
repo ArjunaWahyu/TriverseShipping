@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../login.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-box-register">
+            <div class="close-button">
+                <a href="/"><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <h2>Register</h2>
+            <form action="/auth/register.html" method="POST" id="registerForm" onsubmit="return validateForm()">
+                <div class="input-box">
+                    <input type="text" placeholder="Name" required name="name">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required name="email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required id="password" name="password">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Confirm Password" required id="confirmPassword" name="confirmpassword">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn" id="register">Confirm Register</button>
+
+                <div id="messageContainer">
+                    <!-- Pesan akan ditampilkan di sini -->
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            if (password !== confirmPassword) {
+                alert("Password and Confirm Password do not match.");
+                return false; // Mencegah formulir untuk dikirim
+            }
+            return true;
+
+            // Menampilkan pesan berhasil
+            message.style.display = "block";
+        }
+        function showMessage(message) {
+        const messageContainer = document.getElementById("messageContainer");
+        messageContainer.innerHTML = `<h4 class="alert alert-danger mt-4">${message}</h4>`;
+        }
+
+        // Ambil pesan dari server jika ada
+        const messageFromServer = "<%= message %>";
+        if (messageFromServer) {
+            showMessage(messageFromServer);
+        }
+
+
+    </script>
+</body>
+</html>

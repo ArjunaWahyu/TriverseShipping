@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../information_terms.css">
+    <script src="../script.js" defer></script>
+    <script>
+        function redirectToFAQ() {
+            // Mengarahkan ke halaman "information_faq.html" saat tombol "FAQ" diklik
+            window.location.href = 'information_faq.html';
+        }
+    
+        function redirectToTerms() {
+            // Mengarahkan ke halaman "information_terms.html" saat tombol "Terms" diklik
+            window.location.href = 'information_terms.html';
+        }
+    </script>
+    <title>Triverse Shipping</title>
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../../image/triverse.png" alt="Triverse Shipping Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu-item" id="order">
+                        <a href="order.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/packing.png" alt="packing"/>
+                            </span>
+                        </a>
+                        Order
+                    </li>
+                    <li class="menu-item parent" id="search">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search--v1"/></span>
+                        Search
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="trace">
+                                <a href="tracking.html">Trace & Track</a>
+                            </li>
+                            <li id="rates">
+                                <a href="shipping_rates.html">Shipping Rates</a>
+                            </li>
+                            <li id="find">
+                                <a href="find_drop_point.html">Find Drop Point</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="services" >
+                        <a href="services.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/loading-truck--v1.png" alt="loading-truck--v1"/>
+                        </span>
+                        Services
+                        </a>
+                    </li>
+                    <li class="menu-item parent" id="information">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/info--v1.png" alt="info--v1"/>
+                        </span>
+                        Information
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="faq">
+                                <a href="information_faq.html">FAQ</a>
+                            </li>
+                            <li id="terms">
+                                <a href="information_terms.html">Terms</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="about">
+                        <a href="about_us.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/conference-call--v1.png" alt="conference-call--v1"/>
+                            </span>
+                        </a>
+                        About Us
+                    </li>
+                    <li class="menu-item parent" id="login">
+                        <a href="home.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/test-account.png" alt="test-account"/>
+                        </span>
+                        </a>
+                        <% if (userLoggedIn) { %>
+                            <%= username %>
+                        <% } else { %>
+                            <a href="/login.html">Login/Register</a>
+                        <% } %>
+                    </li>
+                    <li action="/logout" method="post" id="logout-button" >
+                        <a href="/">
+                            <button id="logout-button">Logout</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="../image/Information 1.png" alt="Banner 1">
+                </div>
+                <div class="slide">
+                    <img src="../image/information 2.png" alt="Banner 2">
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="info-button" onclick="redirectToFAQ()">FAQ</button>
+            <button class="info-button active" onclick="redirectToTerms()">Terms</button>
+        </div>
+        <div class="terms-container">
+            <p>SYARAT DAN KETENTUAN PENGIRIMAN</p>
+            <p>
+                Pada saat menggunakan Jasa Pengiriman atau penyerahan Konsinyasi kepada Triverse. Anda sebagai “ Pengirim ” menyatakan bahwa Anda telah membaca, mengetahui, memahami, dan menyetujui, atas nama Anda dan/atau atas atas nama pihak lain yang berkepentingan dengan Kiriman, bahwa syarat dan ketentuan pengiriman ini, beserta perubahannya masing-masing dari waktu ke waktu (“ Syarat dan Ketentuan ” ) di bawah ini berlaku dan Pengirim setuju bahwa Syarat dan Ketentuan ini merupakan suatu perjanjian yang mengikat antara Pengirim dan Triverse.
+            </p>
+    
+            <!-- Tambahkan ketentuan lainnya sesuai dengan kebutuhan Anda -->
+        </div>
+
+        <div class="terms-container2">
+            <p>1. KETENTUAN UMUM</p>
+            <br>
+            <p>1.1 Seluruh Layanan Pengiriman dilakukan oleh Triverse berdasarkan Syarat dan Ketentuan ini.</p>
+            <p>1.2 Triverse dan Pengirim dapat menyepakati ketentuan-ketentuan khusus yang mengesampingkan atau belum diatur dalam Syarat dan Ketentuan ini dalam perjanjian tersendiri. Untuk menghindari keraguan, apabila terjadi pertentangan antara Syarat dan Ketentuan ini dengan ketentuan khusus, maka ketentuan khusus tersebut yang akan berlaku.</p>
+            <p>1.3 Setiap penggunaan terminologi atau kata lain dalam bentuk tunggal akan mencakup bentuk jamak dan sebaliknya sesuai dengan konteks dalam Syarat dan Ketentuan ini.<br>
+            <p>1.4 Apabila Triverse tidak melaksanakan haknya berdasarkan Syarat dan Ketentuan ini, maka Pengirim melepaskan Triverse dari tanggung jawab, segala biaya atau kerugian lainnya, dan tuntutan pihak manapun mengenai hak Triverse yang tidak dilaksanakan atau dilaksanakan oleh Triverse sebagaimana diatur dalam Ketentuan ini dan Ketentuan.</p>
+            <p>1.5 Apabila Triverse memutuskan untuk mengubah Syarat dan Ketentuan ini, Triverse akan mempublikasikan perubahan tersebut di Situs Resmi. Pengirim setuju bahwa Pengirim akan bertanggung jawab untuk meninjau Syarat dan Ketentuan ini secara berkala dari waktu ke waktu untuk mendapatkan informasi terkini terkait Layanan Pengiriman.</p>
+            <p>1.6 Pengirim setuju bahwa Triverse mempunyai hak akhir untuk menafsirkan Syarat dan Ketentuan ini jika terdapat perbedaan penafsiran atau pemahaman terhadap ketentuan dalam Syarat dan Ketentuan ini.</p>
+    
+            <!-- Tambahkan ketentuan lainnya sesuai dengan kebutuhan Anda -->
+        </div>
+        <div class="terms-container2">
+            <p>2. KEWAJIBAN DAN TANGGUNG JAWAB PENGIRIM</p>
+            <br>
+            <p>2.1 Pengirim harus mencantumkan identitas (seperti nama, alamat dan nomor telepon) Penerima dan Pengirim dengan benar, akurat dan lengkap.</p>
+            <p>2.2 Pengirim harus memberikan pemberitahuan yang benar, akurat dan lengkap mengenai isi, sifat, berat dan nilai Kiriman.</p>
+            <p>2.3 Pengirim harus mengemas Kiriman dengan baik dan bertanggung jawab untuk melindungi isi Kiriman selama pengiriman sesuai dengan pedoman dan prosedur pengemasan Triverse</p>
+            <p>2.4Triverse berhak menolak Kiriman yang menurut Triverse: (i) alamat Penerima dan informasi pengiriman tidak jelas, (ii) kemasan tidak sesuai dengan pedoman dan tata cara pengemasan Triverse, dan/atau (iii) berisi barang yang dilarang oleh peraturan perundang-undangan atau Syarat dan Ketentuan ini.
+                Kesalahan keterangan atau informasi mengenai Kiriman sepenuhnya menjadi tanggung jawab Pengirim dan dengan ini Pengirim membebaskan dan bertanggung jawab kepada Triverse atas segala tindakan, tuntutan, sanksi dan denda yang timbul akibat kesalahan tersebut</p>
+    
+            <!-- Tambahkan ketentuan lainnya sesuai dengan kebutuhan Anda -->
+        </div>
+        <div class="terms-container2">
+            <p>3. BIAYA JASA PENGIRIMAN</p>
+            <br>
+            <p>3.1 Triverse berhak membayar biaya Layanan Pengiriman berdasarkan berat, jenis, tingkat, jarak dan volume Kiriman yang ditentukan oleh Triverse sebagaimana tercantum dalam Website Resmi.</p>
+            <p>3.2 Triverse berhak menimbang Kiriman dan hasil penimbangan tersebut akan menjadi acuan dalam penagihan.</p>
+        </div>
+        <div class="terms-container2">
+            <p>4. KIRIM YANG TIDAK DITERIMA</p>
+            <br>
+            <p>4.1 Apabila dalam jangka waktu 2 (dua) hari kalender sejak (i) kiriman gagal terkirim selain karena kesalahan Triverse (misalnya alamat penerima tidak jelas atau tidak dapat ditemukan, penerima menolak kiriman, penerima tidak ada atau tidak dapat dihubungi, dsb) dan (ii) pemberitahuan dari Triverse kepada Pengirim bahwa Kiriman gagal terkirim, Pengirim wajib melakukan konfirmasi apakah bersedia menerima Kiriman kembali atau tidak.</p>
+            <div class="end">
+                <p>4.2 Apabila Pengirim tidak dapat memastikan apakah Kiriman tersebut diterima kembali atau tidak setelah 2 (dua) hari kalender sejak pemberitahuan Triverse, maka Pengirim memberikan hak yang tidak dapat dibatalkan kepada Triverse untuk: Menyimpan Kiriman dan/atau menjual Kiriman; atau Hancurkan Pengiriman.</p>
+            </div>
+    
+            <!-- Tambahkan ketentuan lainnya sesuai dengan kebutuhan Anda -->
+        </div>
+        
+    </main>
+
+        
+    
+
+    
+
+</body>
+</html>

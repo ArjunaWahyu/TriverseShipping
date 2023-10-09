@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../order.css">
+    <script src="../script.js" defer></script>
+    <title>Halaman Order</title>
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../../image/triverse.png" alt="Triverse Shipping Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menu-item" id="order">
+                        <a href="order.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/packing.png" alt="packing"/>
+                            </span>
+                        </a>
+                        Order
+                    </li>
+                    <li class="menu-item parent" id="search">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search--v1"/></span>
+                        Search
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="trace">
+                                <a href="tracking.html">Trace & Track</a>
+                            </li>
+                            <li id="rates">
+                                <a href="shipping_rates.html">Shipping Rates</a>
+                            </li>
+                            <li id="find">
+                                <a href="find_drop_point.html">Find Drop Point</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="services" >
+                        <a href="services.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/loading-truck--v1.png" alt="loading-truck--v1"/>
+                        </span>
+                        Services
+                        </a>
+                    </li>
+                    <li class="menu-item parent" id="information">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/000000/info--v1.png" alt="info--v1"/>
+                        </span>
+                        Information
+                        <span class="arrow">
+                            <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                        </span>
+                        <ul class="submenu">
+                            <li id="faq">
+                                <a href="information_faq.html">FAQ</a>
+                            </li>
+                            <li id="terms">
+                                <a href="information_terms.html">Terms</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" id="about">
+                        <a href="about_us.html">
+                            <span class="menu-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/conference-call--v1.png" alt="conference-call--v1"/>
+                            </span>
+                        </a>
+                        About Us
+                    </li>
+                    <li class="menu-item parent" id="login">
+                        <a href="home.html">
+                        <span class="menu-icon">
+                            <img width="18" height="18" src="https://img.icons8.com/ios/50/test-account.png" alt="test-account"/>
+                        </span>
+                        </a>
+                        <% if (userLoggedIn) { %>
+                            <%= username %> <span class="arrow">
+                                <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                            </span>
+                            <ul class="submenu">
+                                <!-- <li id="pi">
+                                    <a href="personal_info.html">Personal Info</a>
+                                </li> -->
+                                <!-- Add other submenu items as needed -->
+                            </ul>
+                        <% } else { %>
+                            <!-- <a href="/">Login/Register</a> -->
+                        <% } %>
+                    </li>
+                    <li id="logout-button">
+                        <a href="/">
+                            <button id="logout-button">Logout</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="sbanner1">
+                <img src="../image/order .png" alt="Banner 1" width="1220" height="260">
+            </div>
+        </div>
+
+        <section class="order-container">
+            <div class="informasi-pengirim">
+                <h2>Informasi Pengirim</h2>
+                <hr class="feature-divider">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama"  required>
+                    </div>
+                    <div class="input-field" id="kode-pos-input-field">
+                        <label for="telepon">No. Telepon:</label>
+                        <input type="text" id="telepon" name="telepon"  required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="kota">Kota Asal :</label>
+                        <input type="text" id="nama" name="nama"  required>
+                    </div>
+                    <div class="input-field" id="kode-pos-input-field">
+                        <label for="kode">Kode Pos :</label>
+                        <input type="text" id="telepon" name="telepon" required>
+                    </div>
+                </div>
+                <div class="input-group" >
+                    <div class="input-field" id="alamat-input-field">
+                        <label for="alamat">Alamat Lengkap :</label>
+                        <input type="text" id="alamat" name="alamat"  required>
+                    </div>
+                </div><br><br><br>
+                <div class="informasi-pengirim">
+                    <h2>Informasi Penerima</h2>
+                    <hr class="feature-divider">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="nama">Nama:</label>
+                            <input type="text" id="nama" name="nama"  required>
+                        </div>
+                        <div class="input-field" id="kode-pos-input-field">
+                            <label for="telepon">No. Telepon:</label>
+                            <input type="text" id="telepon" name="telepon"  required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="kota2">Kota Asal :</label>
+                            <input type="text" id="kota2" name="kota2"  required>
+                        </div>
+                        <div class="input-field" id="kode-pos-input-field">
+                            <label for="kode2">Kode Pos :</label>
+                            <input type="text" id="kode2" name="kode2" required>
+                        </div>
+                    </div>
+                    <div class="input-group" >
+                        <div class="input-field" id="alamat2-input-field">
+                            <label for="alamat2">Alamat Lengkap :</label>
+                            <input type="text" id="alamat2" name="alamat2"  required>
+                        </div>
+                        <div class="input-field" id="alamat2-input-field">
+                            <label for="alamat_detail">Alamat Detail :</label>
+                            <input type="text" id="alamat_detail" name="alamat_detail" required>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" onclick="redirectToAnotherPage()">Next</button>
+                    </div>
+                <!-- Tambahkan field lainnya di sini sesuai kebutuhan -->
+            </div>
+        </section>
+    </main>
+    <script>
+        function redirectToAnotherPage() {
+            // Ganti URL berikut dengan URL halaman tujuan Anda
+            window.location.href = 'next_order.html';
+        }
+    </script>
+</body>
+</html>

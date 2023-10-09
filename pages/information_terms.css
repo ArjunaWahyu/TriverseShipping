@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+
+}
+
+header {
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+  nav ul li {
+    display: inline;
+    margin-right: 5px;
+  }
+  
+  /* Submenu Style */
+  nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid #555; /* Menambahkan pemisah di atas submenu */
+
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+    left: 0;
+    top: 100%;
+  }
+  
+  nav ul ul li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #555; /* Menambahkan pemisah antara submenunya */
+  }
+  
+  /* Style untuk tautan submenu */
+  nav ul ul li a {
+    color: #fff;
+    text-align: left;
+    padding-left: 5px; /* Menambahkan padding kiri untuk submenunya */
+    text-decoration: none;
+  }
+  
+  nav ul ul li:hover {
+    background-color: #43A2D9; /* Warna latar belakang saat mengarahkan kursor ke submenu */
+  }
+  
+
+.menu-item a {
+    text-decoration: none; /* Menghapus underlined link */
+    color: inherit; /* Menggunakan warna teks yang sama dengan kontainer */
+}
+
+.transparent-header {
+    background-color: rgba(255, 255, 255, 0.7); /* Warna latar belakang transparan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-right: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-item {
+    position: relative;
+    padding: 15px;
+    /* margin: 0 15px; */
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu-item:hover {
+    color: #44A4DC;
+    background-color: #f3f3f3;
+}
+
+.menu-icon {
+    margin-right: 5px;
+}
+
+.arrow {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+    margin-left: 5px;
+    
+}
+
+/* Gaya Submenu */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 200px; /* Lebar submenu yang lebih besar */
+    border-radius: 0 0 5px 5px; /* Sudut bulat bawah */
+    overflow: hidden; /* Agar tepi menu tidak muncul saat transisi */
+    transform-origin: top center; /* Tepi bawah submenu sebagai titik transformasi */
+    transform: scaleY(0); /* Awalnya, submenu diubah ke skala 0 di sumbu Y */
+    transition: transform 0.3s ease; /* Transisi muncul/sembunyi */
+    z-index: 1;
+}
+
+.submenu-item {
+    padding: 10px 0; /* Padding atas dan bawah */
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    margin-left: 0; /* Menghapus padding kiri */
+}
+
+.submenu-item:hover {
+    background-color: #f3f3f3;
+}
+
+.parent:hover .submenu {
+    transform: scaleY(1); /* Saat hover pada parent, submenu diubah kembali ke skala normal */
+}
+
+.submenu-item:last-child {
+    margin-bottom: 0;
+}
+/* Gaya slider */
+.slider-container {
+    margin-top: 10px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 30%
+
+}
+
+.button-container {
+    text-align: center; /* Tombol akan terpusat */
+    margin-top: 20px; /* Berikan jarak atas sesuai kebutuhan */
+}
+
+.info-button {
+    padding: 20px 100px; /* Sesuaikan ukuran padding dengan preferensi Anda */
+    margin: 0 10px; /* Sesuaikan jarak antara tombol dengan preferensi Anda */
+    font-size: 16px; /* Sesuaikan ukuran font dengan preferensi Anda */
+    background-color: #D9D9D9; /* Sesuaikan warna latar belakang dengan preferensi Anda */
+    color: #000000; /* Sesuaikan warna teks dengan preferensi Anda */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Jika Anda ingin mengatur properti lain, Anda bisa menambahkannya di sini */
+}
+
+/* FAQ container styling */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* FAQ item styling */
+.faq-item {
+    margin-bottom: 5px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: -10px;
+}
+
+.answer {
+    font-size: 16px;
+    color: #666;
+    margin-top: -5px;
+}
+
+/* CSS untuk tombol aktif (FAQ) */
+.info-button.active {
+    background-color:#C5E5F8; /* Ganti warna latar belakang */
+    color: #000000; /* Ganti warna teks */
+    /* Gaya tambahan sesuai kebutuhan */
+}
+
+/* CSS untuk paragraf ketentuan */
+.terms-container {
+    max-width: 1300px;
+    margin: 60px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: -50px;
+    
+}
+.terms-container2 {
+    max-width: 1285px;
+    margin: 60px;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: -25px;
+    
+}
+
+.terms-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 7px;
+}
+
+.terms-container p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    text-align: justify;
+    
+}
+
+.terms-container2 p {
+    font-size: 16px;
+    color: #000008;
+    line-height: 1.7;
+    margin-bottom: -20px;
+    text-align: justify;
+    
+}
+
+.end p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: justify;
+}
