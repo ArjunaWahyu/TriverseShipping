@@ -1,3 +1,5 @@
+export const config = { amp: "hybrid" };
+
 setTimeout(function () {
   const menuItems = document.querySelectorAll(".menu-item");
 

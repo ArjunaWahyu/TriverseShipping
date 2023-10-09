@@ -1,3 +1,5 @@
+export const config = { amp: "hybrid" };
+
 setTimeout(function () {
   function loadProvinsi() {
     fetch("/api/provinsi")
