@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../about_us.css">
     <title>Triverse Shipping</title>
 </head>
-
 <body>
     <div class="slider-container">
         <div class="slide">
@@ -19,42 +17,6 @@
         <button class="prev" onclick="prevSlide()">&#10094;</button>
         <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
-    <!-- <script src="../about_us.js"></script> -->
-    <script>
-
-        import { useEffect } from "react";
-
-        useEffect(() => {
-            // Kode JavaScript yang mencoba mengakses `document` di sini
-            let currentPosition = 1; // Mulai dari gambar pertama
-            const totalSlides = 2; // Jumlah total gambar
-
-            const slides = document.querySelectorAll('.slide');
-
-            function showSlide(n) {
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = 'none';
-                }
-
-                slides[n].style.display = 'flex';
-            }
-
-            function nextSlide() {
-                currentPosition = (currentPosition % totalSlides) + 1;
-                showSlide(currentPosition - 1);
-            }
-
-            function prevSlide() {
-                currentPosition = (currentPosition - 2 + totalSlides) % totalSlides + 1;
-                showSlide(currentPosition - 1);
-            }
-
-            // Initial display
-            showSlide(currentPosition - 1);
-        }, []);
-
-        
-    </script>
+    <script src="./about_us.js"></script>
 </body>
-
 </html>
